@@ -478,8 +478,9 @@ module CollectiveIdea #:nodoc:
         
         # reload left, right, and parent
         def reload_nested_set
-          reload(:select => "#{quoted_left_column_name}, " +
-            "#{quoted_right_column_name}, #{quoted_parent_column_name}")
+          reload
+          #reload(:select => "#{quoted_left_column_name}, " +
+          #  "#{quoted_right_column_name}, #{quoted_parent_column_name}")
         end
         
         def move_to(target, position)
